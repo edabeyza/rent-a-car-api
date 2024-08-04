@@ -16,5 +16,8 @@ const PORT = process.env?.PORT || 8000
 const { dbConnection } = require('./src/configs/dbConnection')
 dbConnection()
 
+/* ------------------------------ errorHandler ------------------------------ */
+app.use(require('./src/middlewares/errorHandler'))
+
 /* ------------------------------- run server ------------------------------- */
 app.listen(PORT, () => console.log('Running on http://127.0.0.1:' + PORT))
