@@ -5,3 +5,6 @@
 
 const { mongoose } = require('../configs/dbConnection')
 
+const Car = new mongoose.Schema({
+    
+})
