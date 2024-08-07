@@ -5,6 +5,28 @@
 
 const { mongoose } = require('../configs/dbConnection')
 
-const Car = new mongoose.Schema({
-    
+const CarSchema = mongoose.Schema({
+    plateNumber: {},
+
+    brand: {},
+
+    model:{},
+
+    year: {},
+
+    isAutomathic: {},
+
+    pricePerDay: {},
+
+    isPublish:{},
+
+    createdId:{},
+
+    updatedId:{}
+
+}, { 
+    collection:'cars',
+    timestamps: true
 })
+
+module.exports.Car = mongoose.model('Car', CarSchema)
